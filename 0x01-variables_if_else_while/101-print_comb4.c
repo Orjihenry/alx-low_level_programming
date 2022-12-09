@@ -10,20 +10,28 @@
 
 int main(void)
 {
-	int d = 0;
+int ch;
+int b;
+int a;
 
-	while (d <= 9)
+for (ch = 0; ch < 8; ch++)
+{
+	for (b = ch + 1; b < 9; b++)
 	{
-		putchar(d + 48);
-
-		if (d != 9)
+		for (a = b + 1; a < 10; a++)
 		{
-			putchar(',');
-			putchar(' ');
-		}
+			putchar((ch % 10) + '0');
+			putchar((b % 10) + '0');
+			putchar((a % 10) + '0');
 
-		++d;
+			if (ch != 7)
+			{
+				putchar(44);
+				putchar(32);
+			}
+		}
 	}
+}
 	putchar(10);
 	return (0);
 }
