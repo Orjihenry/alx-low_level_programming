@@ -2,9 +2,9 @@
 
 /**
 * main - a program that prints the alphabet in lowercase,
-* 	 followed by a new line.
+*	 followed by a new line.
 *
-* Return: Always 0
+* Return: Always 0 (Success)
 */
 
 int main(void)
@@ -12,11 +12,10 @@ int main(void)
 	char ch = 'a';
 
 	while (ch <= 'z')
-	{ 
+	{
 		putchar(ch);
 			++ch;
 	}
-	putchar(10); /*New line in ASCII code format*/
-
+	putchar('\n');
 	return (0);
 }
