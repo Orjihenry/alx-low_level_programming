@@ -9,12 +9,12 @@
 
 int main(void)
 {
-	int nums = 0;
+	int d = 0;
 
-	while (nums <= 9)
+	while (d <= 9)
 	{
-		printf("%i", nums);
-		++nums;
+		printf("%d", d);
+		++d;
 	}
 	printf(10);
 	return (0);
