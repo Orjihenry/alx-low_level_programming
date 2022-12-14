@@ -6,7 +6,7 @@
  * Return: 1 or 0
  */
 
-int _isalpha(void)
+int _isalpha(int c)
 {
 	if (c > 64 && c < 91 && c >= 97
 			&& c <= 122)
