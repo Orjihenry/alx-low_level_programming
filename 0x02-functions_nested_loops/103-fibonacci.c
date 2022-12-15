@@ -1,4 +1,4 @@
-#include"main.h"
+#include <stdio.h>
 
 /**
  * main - Prints the sum of even-valued Fibonacci sequence
@@ -7,7 +7,7 @@
  * Return: Always 0 (Success)
 */
 
-int main(void)
+nt main(void)
 {
 	unsigned long fib1 = 0, fib2 = 1, sum;
 	float total_sum;
