@@ -15,5 +15,5 @@ void more_numbers(void)
 		_putchar((n + 48) * 10);
 		n++;
 	} while (n >= 0 && n <= 14);
-	_putchar('\n');
+	_putchar(10);
 }
