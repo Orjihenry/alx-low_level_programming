@@ -12,7 +12,7 @@ void print_numbers(void)
 {
 	int n;
 
-	for (n = 0; n < 10; n++)
+	for (n = 0; n < 10; n = n + 1)
 	{
 		putchar("%d\n", n);
 	}
