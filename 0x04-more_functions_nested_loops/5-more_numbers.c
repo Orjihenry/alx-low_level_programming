@@ -7,17 +7,21 @@
  * Return: 0
  */
 
-oid more_numbers(void)
+void more_numbers(void)
 {
-	int n, ch;
+	int n, row, count;
 
-	for (n = 0; n < 10; n++)
+	for (row = 1; row <= 10; ++row)
 	{
-		for (ch = 0; ch < 15; ch++)
+		for (count = 0; count <= 14; ++count)
 		{
-			if (ch >= 10)
-				_putchar(j / 10 + '0');
-			_putchar(ch % 10 + '0');
+			n = count;
+			if (count > 9)
+			{
+				_putchar(1 + 48);
+				n = count % 10;
+			}
+			_putchar(n + 48);
 		}
 		_putchar(10);
 	}
