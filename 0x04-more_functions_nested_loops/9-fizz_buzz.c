@@ -8,27 +8,27 @@
  *
  * Return: Success 0
  */
+
 int main(void)
 {
-	int i;
+	int num;
 
-	for (i = 1; i <= 100; i++)
+	for (num = 1; num <= 100; ++num)
 	{
-		if (i % 3 == 0 && i % 5 != 0)
-		{
-			printf(" Fizz");
-		} else if (i % 5 == 0 && i % 3 != 0)
-		{
-			printf(" Buzz");
-		} else if (i % 3 == 0 && i % 5 == 0)
-		{
-			printf(" FizzBuzz");
-		} else
-		{
-			printf(" %d", i);
-		}
+		if (num % 3 == 0 && !(num % 5 == 0))
+			printf("Fizz");
+		else if (num % 5 == 0 && !(num % 3 == 0))
+			printf("Buzz");
+		else if (num % 3 == 0 && num % 5 == 0)
+			printf("FizzBuzz");
+		else
+			printf("%d", num);
+
+		if (num != 100)
+			printf(" ");
+		else
+			printf(10);
 	}
-	printf(10);
 
 	return (0);
 }
