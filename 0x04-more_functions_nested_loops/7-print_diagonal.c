@@ -5,7 +5,6 @@
  *
  * @n: Parameter that determines number of diagonal line.
  *
- * Return: Success 0
  */
 
 void print_diagonal(int n)
