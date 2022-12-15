@@ -7,13 +7,18 @@
  * Return: 0
  */
 
-void more_numbers(void)
+oid more_numbers(void)
 {
-	int n = 0;
+	int n, ch;
 
-	do {
-		_putchar((n + 48) * 10);
-		n++;
-	} while (n >= 0 && n <= 14);
-	_putchar(10);
+	for (n = 0; n < 10; n++)
+	{
+		for (ch = 0; ch < 15; ch++)
+		{
+			if (ch >= 10)
+				_putchar(j / 10 + '0');
+			_putchar(ch % 10 + '0');
+		}
+		_putchar(10);
+	}
 }
