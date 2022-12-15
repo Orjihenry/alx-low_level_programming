@@ -15,4 +15,6 @@ int mul(int a, int b)
 
 	ab = a * b;
 	_putchar("%d", ab);
+
+	return (0);
 }
