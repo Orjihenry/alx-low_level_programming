@@ -9,14 +9,21 @@
 
 int main(void)
 {
-	int sum, num;
+	int i;
+	long int fibonacci[50];
 
-	for (num = 0; num < 1024; ++num)
+	fibonacci[0] = 1;
+	fibonacci[1] = 2;
+	printf("%ld, %ld, ", fibonacci[0], fibonacci[1]);
+
+	for (i = 2; i < 50; i++)
 	{
-		if ((num % 3 == 0) || (num % 5 == 0))
-			sum += num;
+		fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
+		if (i == 49)
+			printf("%ld\n", fibonacci[i]);
+		else
+			printf("%ld, ", fibonacci[i]);
 	}
-	printf("%d\n", sum);
 
 	return (0);
 }
