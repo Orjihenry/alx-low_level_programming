@@ -2,12 +2,12 @@
 
 /**
  * main - Prints the sum of even-valued Fibonacci sequence
- * 	not exceed 4 million
+ *		not exceed 4 million.
  *
  * Return: Always 0 (Success)
 */
 
-nt main(void)
+int main(void)
 {
 	unsigned long fib1 = 0, fib2 = 1, sum;
 	float total_sum;
