@@ -1,44 +1,37 @@
+#include "main.h"
+
 /**
- * cap_string - Program that capitalizes
- * 		all words of a string.
+ * cap_string - Function that capitalizes every word of a string.
  *
- * @s: pointer to char input array
+ * 
+ * @s: string to modify
  *
  * Return: Success 0
-*/
+ */
 
 char *cap_string(char *s)
 {
-	int i = 0;
+	int i, j;
 
-	/*iterate through our array values*/
-	while (s[i] != '\0')
+	char spe[13] = {' ', '\t', '\n', ',', ';', '.',
+		'!', '?', '"', '(', ')', '{', '}'};
+
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		/*check for any lowercase letters*/
-		if (s[i] >= 97 && s[i] <= 122)
+		if (i == 0 && s[i] >= 'a' && s[i] <= 'z')
+			s[i] -= 32;
+
+		for (j = 0; j < 13; j++)
 		{
-			/**
-			 * if we have a null character
-			 * change its value to capital
-			*/
-			if (i == 0)
+			if (s[i] == spe[j])
 			{
-				s[i] -= 32;
-			}
-			/**
-			 * if we find any character matching the below before any small
-			 * letter we change that value to a capital letter.
-			*/
-			if (s[i - 1] == 32 || s[i - 1] == 9 || s[i - 1] == 10 ||
-				s[i - 1] == 44 || s[i - 1] == 59 || s[i - 1] == 46 ||
-				s[i - 1] == 33 || s[i - 1] == 63 || s[i - 1] == 34 ||
-				s[i - 1] == 40 || s[i - 1] == 41 || s[i - 1] == 123 ||
-				s[i - 1] == 124)
-			{
-				s[i] -= 32;
+				if (s[i + 1] >= 'a' && s[i + 1] <= 'z')
+				{
+					s[i + 1] -= 32;
+				}
 			}
 		}
-		i++;
 	}
+
 	return (s);
 }
