@@ -2,38 +2,52 @@
 #include "dog.h"
 
 /**
- * _strlen - Function that gets length of string.
+ * _strlen - Function that gets a length of string.
  *
- * @str: String to get the length
+ * @s: Parameter to get length
  *
- * Return: length of @str
-*/
+ * Return: length of @s
+ */
 
-int _strlen(const char *str)
-{
-	int length = 0;
-
-	while (*str++)
-		length++;
-	return (length);
-}
-
-/**
- * _strcopy - Function that returns @dest with a copy of a string from @src.
- *
- * @src: string to copy
- * @dest: copy string to here
- *
- * Return: @dest
-*/
-
-char *_strcopy(char *dest, char *src)
+int _strlen(char *s)
 {
 	int a;
 
-	for (a = 0; src[a]; a++)
-		dest[a] = src[a];
-	dest[a] = '\0';
+	a = 0;
+
+	while (s[a] != '\0')
+	{
+		a++;
+	}
+
+	return (a);
+}
+
+/**
+ * *_strcpy - Function that returns @dest with a copy of a string from @src.
+ *
+ * @src: parameter to be copied
+ * @dest: parameter copied to @dest
+ *
+ * Return: @dest
+ */
+
+char *_strcpy(char *dest, char *src)
+{
+	int len, i;
+
+	len = 0;
+
+	while (src[len] != '\0')
+	{
+		len++;
+	}
+
+	for (i = 0; i < len; i++)
+	{
+		dest[i] = src[i];
+	}
+	dest[i] = '\0';
 
 	return (dest);
 }
@@ -41,11 +55,11 @@ char *_strcopy(char *dest, char *src)
 /**
  * new_dog - Function that creates a new dog.
  *
- * @name: name of dog
- * @age: age of dog
- * @owner: owner of dog
+ * @name: name of the dog
+ * @age: age of the dog
+ * @owner: owner of the dog
  *
- * Return: Success 0
+ * Return: Success 0 or NULL
  */
 
 dog_t *new_dog(char *name, float age, char *owner)
