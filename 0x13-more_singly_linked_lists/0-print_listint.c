@@ -5,7 +5,7 @@
  *
  * @h: type listint_t to print
  *
- * Return: nodes count
+ * Return: element count
  */
 
 size_t print_listint(const listint_t *h)
